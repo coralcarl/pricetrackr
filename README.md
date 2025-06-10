@@ -34,7 +34,7 @@ This Python script monitors the price of one or more items from specified websit
    pip install -r requirements.txt
    ```
 
-3. **Create your config file**:
+3. **Edit your config file**:
    Change the `config.ini` file in the project directory with the following structure:
 
    ```ini
@@ -53,7 +53,7 @@ This Python script monitors the price of one or more items from specified websit
    - `last_seen` — last known price (auto-updated)  
    - `retries` — failed fetch count (auto-updated)  
 
-   Each key can be overwritten by the specific item. For example: You could specify a custom webhook for each one.
+   Each key can be set either by the item or on the global level via DEFAULT.
 
 ## Usage
 
