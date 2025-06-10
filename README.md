@@ -21,23 +21,23 @@ This Python script monitors the price of one or more items from specified websit
 
 1. **Clone the repository**:
 
-   \`\`\`bash
+   ```bash
    git clone https://github.com/coralcarl/pricetrackr.git
    cd pricetrackr
-   \`\`\`
+   ```
 
 2. **Install dependencies**:
 
-   \`\`\`bash
+   ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 3. **Create your config file**:
    Change the `config.ini` file in the project directory with the following structure:
 
-   \`\`\`ini
+   ```ini
    [DEFAULT]
    discord_webhook = https://discord.com/api/webhooks/yourwebhookurl
    max_retries = 10
@@ -47,7 +47,7 @@ This Python script monitors the price of one or more items from specified websit
    [Radon Swoop]
    url = https://www.bike-discount.de/de/radon-swoop-10.0-4
    css_selector = #netz-price
-   \`\`\`
+   ```
 
    Optional keys:  
    - `last_seen` — last known price (auto-updated)  
@@ -59,9 +59,9 @@ This Python script monitors the price of one or more items from specified websit
 
 Run the script manually:
 
-\`\`\`bash
+```bash
 python3 tracker.py
-\`\`\`
+```
 
 If the price has changed since the last check, a notification will be sent to your Discord webhook.
 
@@ -71,15 +71,15 @@ To run the script every 5 minutes:
 
 1. Open the crontab editor:
 
-   \`\`\`bash
+   ```bash
    crontab -e
-   \`\`\`
+   ```
 
 2. Add the following line (adjust the path as needed):
 
-   \`\`\`
+   ```
    */5 * * * * cd /full/path/to/pricetrackr/ . .venv/bin/activate /usr/bin/python3 tracker.py
-   \`\`\`
+   ```
 
 > Tip: You can find the correct Python path with \`which python3\`.
 
