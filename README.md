@@ -35,18 +35,24 @@ This Python script monitors the price of one or more items from specified websit
    ```
 
 3. **Edit your config file**:
-   Change the `config.ini` file in the project directory with the following structure:
+   Add your tracked items to the `config.ini` file:
 
    ```ini
    [DEFAULT]
-   discord_webhook = https://discord.com/api/webhooks/yourwebhookurl
+   discord_webhook = https://discord.com/api/webhooks/****yourwebhookurl****
    max_retries = 10
    user_agent = Mozilla/5.0 Chrome/125.0.0.0 Safari/537.36
 
-   # ~~ example item ~~
+   # Real example
    [Radon Swoop]
    url = https://www.bike-discount.de/de/radon-swoop-10.0-4
    css_selector = #netz-price
+
+   # Imaginary example
+   [Toilet Paper]
+   url = https://www.cheaptoiletpaper.com
+   css_selector = div>.prices
+   max_retries = 3
    ```
 
    Optional keys:  
