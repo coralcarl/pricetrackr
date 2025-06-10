@@ -34,8 +34,8 @@ This Python script monitors the price of one or more items from specified websit
    pip install -r requirements.txt
    ```
 
-3. **Edit your config file**:
-   Add your tracked items to the `config.ini` file:
+3. **Create your config file**:
+   Create the following `config.ini` file in the main directory of the project and add the items you want to track.
 
    ```ini
    [DEFAULT]
